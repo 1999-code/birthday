@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    body {
+        background-image: url('https://images.pexels.com/photos/6709039/pexels-photo-6709039.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vb;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+    }
+
+    .blar {
+        width: 600px;
+        height: 500px;
+        border-radius: 15px;
+        background: transparent;
+        backdrop-filter: blur(15px);
+        border: 1px solid rgb(246, 243, 243);
+        margin-top: 150px;
+        display: flex;
+    }
+
+    .input_tag {
+        background: transparent;
+        text-align: center;
+
+    }
+
+    .input_tag :focus {
+        box-shadow: rgb(234, 12, 12) 30px;
+    }
+
+    .btn:hover {
+        box-shadow: 25px;
+    }
+
+    .label {
+        margin-top: 50px;
+    }
+</style>
+
+<body>
+
+    <div class="blar">
+        <h1 class="text-4xl mt-44 font-serif">WELCOME MY LOVE</h1>
+        <div>
+            <div class="mt-14">
+                <label for="name" class="label ">NAME :</label>
+                <input id="name" type="text" id="glass-input" placeholder="ENTER YOUR BEAUTYFUL NAME" class="w-72 px-4 py-2.5 rounded-xl text-white placeholder-white/50
+             bg-white/10 backdrop-blur-md 
+             border border-white/20
+             outline-none transition-all duration-300
+             focus:bg-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/20 my-8" /><br>
+                <label for="password" class="mt-44"> DATE OF BIRTH :</label>
+                <input id="date" type="password" placeholder="ENTER YOUR DOB" class=" w-72 px-4 py-2.5 rounded-xl text-white placeholder-white/50
+             bg-white/10 backdrop-blur-md 
+             border border-white/20
+             outline-none transition-all duration-300
+             focus:bg-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/20 mt-8">
+                <br><br><br>
+                <button onclick="submit(event)" class="btn border border-dark-500 w-28 h-10 rounded ">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function submit(event) {
+            let name = document.getElementById('name').value;
+            let date = document.getElementById('date').value;
+            if (name == 'Afrin' && date == '11062006') {
+                window.location.href = "./birthday2page.html";
+
+            } else {
+                alert("wrong name or db")
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
